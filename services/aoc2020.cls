@@ -27,7 +27,7 @@ ClassMethod Import(dir As %String = "//day6.txt")
             //write !, "nline loop started"
             
             //read line of text from file
-            set line = file.ReadLine()
+            //set line = file.ReadLine()
             set row = ##class(AOC2020.Day6).%New() 
             
             //write !, line
@@ -35,7 +35,7 @@ ClassMethod Import(dir As %String = "//day6.txt")
             set lline = $LENGTH(line)
             write !, line
             ///Write $CHAR(10)
-             }   
+        }   
             
            
 
@@ -45,7 +45,7 @@ ClassMethod Import(dir As %String = "//day6.txt")
                 /// write !, "Current readvalue is: "_readvalue_" i is currently: "_i
            //}
         //set status = row.%Save()
-}
+    }
 
  // set status = row.%Save()
 
