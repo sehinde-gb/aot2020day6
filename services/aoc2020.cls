@@ -26,13 +26,16 @@ ClassMethod Import(dir As %String = "//day6.txt")
         IF (nline >= 1) & (line '= "") {
             //write !, "nline loop started"
             
-            //read line of text from file
-            //set line = file.ReadLine()
+            //read line of text from file           
             set row = ##class(AOC2020.Day6).%New() 
             
             //write !, line
             // get length of line
             set lline = $LENGTH(line)
+            IF (nline =1) {
+                write !, line
+                Write $CHAR(10)
+            }
             write !, line
             ///Write $CHAR(10)
         }   
