@@ -32,7 +32,7 @@ ClassMethod Import(dir As %String = "//day6.txt")
             //write !, line
             // get length of line
             set lline = $LENGTH(line)
-            IF (nline =1) & (line =2){
+            IF (nline =1){
                 write !, line
                 Write $CHAR(10)
             }
