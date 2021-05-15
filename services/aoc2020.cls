@@ -24,7 +24,7 @@ ClassMethod Import(dir As %String = "//day6.txt")
         set nline = $INCREMENT(nline)
         //if line exists loop through each line until no more lines
         IF (nline >= 1) & (line '= "") {
-            write !, "nline loop started"
+            //write !, "nline loop started"
             
             //read line of text from file
             //set line = file.ReadLine()
@@ -53,6 +53,7 @@ ClassMethod Import(dir As %String = "//day6.txt")
 }
 }
 }
+
 
 
 
