@@ -31,7 +31,7 @@ ClassMethod Import(dir As %String = "//day6.txt")
             set row = ##class(AOC2020.Day6).%New() 
             // get length of line
             set lline = $LENGTH(line)
-        
+            write !, lline
             
 
             write !, line
@@ -50,11 +50,7 @@ ClassMethod Import(dir As %String = "//day6.txt")
     // set status = row.%Save()
     // write status
     //Write !, "Import Complete"
+    }
 }
-}
-}
-
-
-
 
 }
