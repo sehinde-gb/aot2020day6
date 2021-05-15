@@ -23,6 +23,13 @@ ClassMethod Import(dir As %String = "//day6.txt")
         // create nline and go through each line of text from file whilst incrementing the counter
         set nline = $INCREMENT(nline)
         //if line exists loop through each line until no more lines
+        IF (line ="abc"){
+                write !, line
+                Write $CHAR(10)
+            }
+            
+            write !, line
+            ///Write $CHAR(10)
         IF (nline >= 1) & (line '= "") {
             //write !, "nline loop started"
             
@@ -32,13 +39,7 @@ ClassMethod Import(dir As %String = "//day6.txt")
             //write !, line
             // get length of line
             set lline = $LENGTH(line)
-            IF (line ="abc"){
-                write !, line
-                Write $CHAR(10)
-            }
             
-            write !, line
-            ///Write $CHAR(10)
         }   
             
            
