@@ -40,8 +40,11 @@ ClassMethod Import(dir As %String = "//day6.txt")
             }   
 
 
-            if (lline =1){
-                
+            if (lline =1){ 
+                write !, line
+            }   
+            
+            if (lline =2){ 
                 write !, line
             }   
             
