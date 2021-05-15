@@ -27,7 +27,7 @@ ClassMethod Import(dir As %String = "//day6.txt")
             //write !, "nline loop started"
             
             //read line of text from file
-            //set line = file.ReadLine()
+            set line = file.ReadLine()
             set row = ##class(AOC2020.Day6).%New() 
             
             //write !, line
