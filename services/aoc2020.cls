@@ -31,8 +31,8 @@ ClassMethod Import(dir As %String = "//day6.txt")
             set row = ##class(AOC2020.Day6).%New() 
             // get length of line
             set lline = $LENGTH(line)
-            /// write !, lline
-            if (lline =1) {
+            write !, lline
+            if (lline <2) {
                 Write $CHAR(10)
             } 
 
