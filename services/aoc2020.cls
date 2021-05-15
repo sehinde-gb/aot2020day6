@@ -47,9 +47,9 @@ ClassMethod Import(dir As %String = "//day6.txt")
         //set status = row.%Save()
 }
 
-// set status = row.%Save()
+ // set status = row.%Save()
 
-// write status
+ // write status
  Write !, "Import Complete"
 }
 
