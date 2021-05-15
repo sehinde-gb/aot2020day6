@@ -36,7 +36,7 @@ ClassMethod Import(dir As %String = "//day6.txt")
                 write !, line
                 Write $CHAR(10)
             }
-            IF (line="a") & (line="b") & (line="c"){
+            IF (line="ab")  
                 write !, line
             }
             //write !, line
@@ -51,12 +51,13 @@ ClassMethod Import(dir As %String = "//day6.txt")
                 /// write !, "Current readvalue is: "_readvalue_" i is currently: "_i
            //}
         //set status = row.%Save()
-    }
-
- // set status = row.%Save()
-
- // write status
- Write !, "Import Complete"
 }
+
+// set status = row.%Save()
+
+// write status
+Write !, "Import Complete"
+
+
 
 }
