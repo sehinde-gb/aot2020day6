@@ -29,13 +29,14 @@ ClassMethod Import(dir As %String = "//day6.txt")
             //read line of text from file
             //set line = file.ReadLine()
             set row = ##class(AOC2020.Day6).%New() 
-            write !, line
             // get length of line
             set lline = $LENGTH(line)
             //write !, lline
             if (lline >=2){
                 Write $CHAR(10)
             } 
+            write !, line
+            
 
             
            
