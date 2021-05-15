@@ -35,25 +35,7 @@ ClassMethod Import(dir As %String = "//day6.txt")
             set lline = $LENGTH(line)
             write !, line
             Write $CHAR(10)
-            ///write !, line
-            #; if (lline =3){
-            #;     write !, line 
-                
-            #; }   
-
-
-            #; if (lline =1){ 
-            #;     Write $CHAR(10)
-            #;     write !, line
-            #; }   
-        
-
-            #; if (lline =2){ 
-            #;     //Write $CHAR(10)
-            #;     write !, line
-                
-            #;     //Write $CHAR(10)
-            #; }   
+             }   
             
            
 
@@ -68,7 +50,6 @@ ClassMethod Import(dir As %String = "//day6.txt")
     // set status = row.%Save()
     // write status
     //Write !, "Import Complete"
-    }
 }
 
 }
