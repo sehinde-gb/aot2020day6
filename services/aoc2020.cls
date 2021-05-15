@@ -25,7 +25,7 @@ ClassMethod Import(dir As %String = "//day6.txt")
         //if line exists loop through each line until no more lines
         IF (nline >= 1) & (line '= "") {
             write !, "nline loop started"
-            WRITE $Y,$CHAR(10)
+            WRITE $CHAR(10)
             //read line of text from file
             //set line = file.ReadLine()
             set row = ##class(AOC2020.Day6).%New() 
