@@ -36,7 +36,7 @@ ClassMethod Import(dir As %String = "//day6.txt")
                 write !, line
                 Write $CHAR(10)
             }
-            IF (nline=3) 
+            IF (line="ab") 
                 Write !, line
             }
             //write !, line
@@ -57,6 +57,8 @@ ClassMethod Import(dir As %String = "//day6.txt")
 
 // write status
 Write !, "Import Complete"
+
+
 
 
 
