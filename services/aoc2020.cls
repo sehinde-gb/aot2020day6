@@ -36,7 +36,7 @@ ClassMethod Import(dir As %String = "//day6.txt")
                 write !, line
                 Write $CHAR(10)
             }
-            write !, line
+            //write !, line
             ///Write $CHAR(10)
         }   
             
