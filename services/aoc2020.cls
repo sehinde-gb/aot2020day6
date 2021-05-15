@@ -43,8 +43,8 @@ ClassMethod Import(dir As %String = "//day6.txt")
             if (lline =1){ 
                 write !, line
             }   
-            Write $CHAR(10)
-            
+        
+
             if (lline =2){ 
                 //Write $CHAR(10)
                 write !, line
