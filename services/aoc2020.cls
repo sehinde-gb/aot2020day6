@@ -24,7 +24,7 @@ ClassMethod Import(dir As %String = "//day6.txt")
         set nline = $INCREMENT(nline)
         //if line exists loop through each line until no more lines
         IF (line ="abc"){
-                write !, line
+                //write !, line
                 Write $CHAR(10)
             }
             
