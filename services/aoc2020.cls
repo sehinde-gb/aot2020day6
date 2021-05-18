@@ -23,7 +23,7 @@ ClassMethod Import(dir As %String = "//day6.txt")
         set line = file.ReadLine()
 
         // replacing carriage return with null field
-        set newline  = $REPLACE(line, "a", "s")
+        set newline  = $REPLACE(line, $c(13), "s")
         
         write !, newline
 
