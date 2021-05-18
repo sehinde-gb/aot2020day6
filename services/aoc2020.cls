@@ -28,7 +28,7 @@ ClassMethod Import(dir As %String = "//day6.txt")
         set lline = $LENGTH(line)
 
     }
-    PRINT COUNT("Intersystems', "a")
+    PRINT COUNT("Intersystems", "a");
 }
 
 }
