@@ -23,8 +23,8 @@ ClassMethod Import(dir As %String = "//day6.txt")
         set line = file.ReadLine()
 
         // replacing carriage return with null field
-        set newline  = $ZSTRIP(line, "*C")
-        
+        set newline  = $$TRANSLATE(line, "abc", "boc")
+
 
         
         write !, newline
