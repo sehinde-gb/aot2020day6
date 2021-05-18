@@ -22,25 +22,12 @@ ClassMethod Import(dir As %String = "//day6.txt")
         set line = file.ReadLine()
         // create nline and go through each line of text from file whilst incrementing the counter
         set nline = $INCREMENT(nline)
-
-        //if line exists loop through each line until no more lines
-        //IF (line ="abc"){
-                //write !, line
-               // Write $CHAR(10)
-           // }
      
         write !, line
         // get length of line
         set lline = $LENGTH(line)
 
     }
-            ///write !, line
-            ///Write $CHAR(10)
-        //IF (nline >= 1) & (line '= "") {
-            
-            
-            //read line of text from file           
-          //  set row = ##class(AOC2020.Day6).%New()
 }
 
 }
