@@ -27,7 +27,7 @@ ClassMethod Import(dir As %String = "//day6.txt")
         write $translate(line," ")
 
         
-        write !, newline
+        //write !, newline
 
         // create nline and go through each line of text from file whilst incrementing the counter
         set nline = $INCREMENT(nline)
