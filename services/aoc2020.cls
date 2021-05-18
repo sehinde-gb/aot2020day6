@@ -23,7 +23,7 @@ ClassMethod Import(dir As %String = "//day6.txt")
         set line = file.ReadLine()
 
         // replacing carriage return with null field
-        set newline  = $REPLACE(line,Chr(10),"")
+        set newline  = $REPLACE(line, "abc", "boc")
         
         // create nline and go through each line of text from file whilst incrementing the counter
         set nline = $INCREMENT(nline)
