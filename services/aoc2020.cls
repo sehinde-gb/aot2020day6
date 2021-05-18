@@ -12,6 +12,7 @@ ClassMethod Import(dir As %String = "//day6.txt")
     QUIT}
     ELSE { write "File: "_dir_" is open"}
 
+    PRINT COUNT("AAAAA","AA"); 
      // instantiate a new class called file
     set file = ##class(%Stream.FileCharacter).%New()
     // create a new variable called sc
