@@ -26,7 +26,7 @@ ClassMethod Import(dir As %String = "//day6.txt")
      
         write !, line
         // replacing carriage return with null field
-        SET newline=$REPLACE(line,Chr(10),"")
+        set newline=$REPLACE(line,Chr(10),"")
 
         // get length of line
         set lline = $LENGTH(line)
