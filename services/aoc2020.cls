@@ -26,8 +26,8 @@ ClassMethod Import(dir As %String = "//day6.txt")
         IF (line ="abc"){
                 //write !, line
                 Write $CHAR(10)
-            }
-            
+            } 
+            PRINT COUNT(line)
             write !, line
             ///Write $CHAR(10)
         IF (nline >= 1) & (line '= "") {
