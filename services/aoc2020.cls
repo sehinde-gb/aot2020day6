@@ -28,6 +28,7 @@ ClassMethod Import(dir As %String = "//day6.txt")
         set lline = $LENGTH(line)
 
     }
+    print count(lline)
 }
 
 }
