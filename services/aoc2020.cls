@@ -21,12 +21,15 @@ ClassMethod Import(dir As %String = "//day6.txt")
     
         //read line of text from file
         set line = file.ReadLine()
+
+        // replacing carriage return with null field
+        set newline  = $REPLACE(line,Chr(10),"")
+        
         // create nline and go through each line of text from file whilst incrementing the counter
         set nline = $INCREMENT(nline)
      
         write !, line
-        // replacing carriage return with null field
-        set newline  = $REPLACE(line,Chr(10),"")
+        
 
         // get length of line
         set lline = $LENGTH(line)
