@@ -28,7 +28,7 @@ ClassMethod Import(dir As %String = "//day6.txt")
                 //write !, line
                // Write $CHAR(10)
            // }
-        write !, "nline loop started"
+     
         write !, line
         // get length of line
         set lline = $LENGTH(line)
