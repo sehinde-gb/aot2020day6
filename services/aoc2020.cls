@@ -25,14 +25,16 @@ ClassMethod Import(dir As %String = "//day6.txt")
         // replacing carriage return with null field
         set newline  = $REPLACE(line, "abc", "boc")
         
+        write !, newline
+
         // create nline and go through each line of text from file whilst incrementing the counter
         set nline = $INCREMENT(nline)
      
-        write !, line
+        //write !, line
         
 
         // get length of line
-        set lline = $LENGTH(line)
+        //set lline = $LENGTH(line)
         //write !, lline
 
     }
