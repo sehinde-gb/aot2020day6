@@ -23,39 +23,22 @@ ClassMethod Import(dir As %String = "//day6.txt")
         // create nline and go through each line of text from file whilst incrementing the counter
         set nline = $INCREMENT(nline)
         //if line exists loop through each line until no more lines
-        IF (line ="abc"){
+        //IF (line ="abc"){
                 //write !, line
-                Write $CHAR(10)
-            } 
-            PRINT COUNT(line)
-            write !, line
+               // Write $CHAR(10)
+           // }
+    }
+            ///write !, line
             ///Write $CHAR(10)
-        IF (nline >= 1) & (line '= "") {
+        //IF (nline >= 1) & (line '= "") {
             //write !, "nline loop started"
             
             //read line of text from file           
-            set row = ##class(AOC2020.Day6).%New() 
+          //  set row = ##class(AOC2020.Day6).%New() 
             
             //write !, line
             // get length of line
-            set lline = $LENGTH(line)
-            
-        }   
-            
-           
-
-        ///    For i=1:1:lline {
-                /// set row.WholeLine = line
-                /// set readvalue = $EXTRACT(line,i,i)
-                /// write !, "Current readvalue is: "_readvalue_" i is currently: "_i
-           //}
-        //set status = row.%Save()
-}
-
-    // set status = row.%Save()
-
-    // write status
-    Write !, "Import Complete"
+            //set lline = $LENGTH(line)
 }
 
 }
