@@ -12,7 +12,7 @@ ClassMethod Import(dir As %String = "//day6.txt")
     QUIT}
     ELSE { write "File: "_dir_" is open"}
 
-    PRINT COUNT("AAAAA","AA"); 
+     
      // instantiate a new class called file
     set file = ##class(%Stream.FileCharacter).%New()
     // create a new variable called sc
@@ -25,6 +25,9 @@ ClassMethod Import(dir As %String = "//day6.txt")
         set nline = $INCREMENT(nline)
      
         write !, line
+        // replacing carriage return with null field
+        SET newline=$REPLACE(line,Chr(10),"")
+
         // get length of line
         set lline = $LENGTH(line)
         write !, lline
