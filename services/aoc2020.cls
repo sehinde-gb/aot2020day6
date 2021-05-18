@@ -24,8 +24,8 @@ ClassMethod Import(dir As %String = "//day6.txt")
 
         // replacing carriage return with null field
         //set newline  = $TRANSLATE(line, "abc", "boc")
-        write $translate(line," ")
-
+        //write $translate(line," ")
+        write $ZSTRIP(" ,line, ","<>W")
         
         //write !, newline
 
