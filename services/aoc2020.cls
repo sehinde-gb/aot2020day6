@@ -27,7 +27,7 @@ ClassMethod Import(dir As %String = "//day6.txt", result)
         }
         s result(i, curr) = ""
 
-        write !, result
+        //write !, result
     
         //read line of text from file
         //set line = file.ReadLine()
