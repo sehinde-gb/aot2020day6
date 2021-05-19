@@ -4,7 +4,7 @@ Class AOC2020.Day6 Extends %RegisteredObject
 /// Description
 Property WholeLine As %String;
 
-ClassMethod Import(dir As %String = "//day6.txt")
+ClassMethod Import(dir As %String = "//day6.txt", result)
 {
     // Open my text file and check it exists
     IF ##class(%File).Exists(dir) '=1 {
@@ -21,7 +21,13 @@ ClassMethod Import(dir As %String = "//day6.txt")
     WHILE ('file.AtEnd) {
 
         set curr = $TRANSLATE(file.ReadLine(), $c(13), "")
-        write !, curr
+        if curr = "" {
+            s i = i + 1
+            continue
+        }
+        s result(i, curr) = ""
+
+        write !, result
     
         //read line of text from file
         //set line = file.ReadLine()
