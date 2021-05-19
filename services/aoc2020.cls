@@ -17,10 +17,14 @@ ClassMethod Import(dir As %String = "//day6.txt")
     set file = ##class(%Stream.FileCharacter).%New()
     // create a new variable called sc
     set sc = file.LinkToFile(dir)
+    set i = 1
     WHILE ('file.AtEnd) {
+
+        set curr = $TRANSLATE(file.ReadLine(), $c(13), "")
+        write !, curr
     
         //read line of text from file
-        set line = file.ReadLine()
+        //set line = file.ReadLine()
 
         // replacing carriage return with null field
         //set newline  = $TRANSLATE(line, "abc", "boc")
@@ -30,7 +34,7 @@ ClassMethod Import(dir As %String = "//day6.txt")
         //write !, newline
 
         // create nline and go through each line of text from file whilst incrementing the counter
-        set nline = $INCREMENT(nline)
+        //set nline = $INCREMENT(nline)
      
         //write !, line
         
