@@ -7,7 +7,7 @@ Property answer1 As %Integer;
 
 Property answer2 As %Integer;
 
-ClassMethod Import(dir As %String = "//day6.txt", result)
+ClassMethod Import(dir As %String = "//day6.txt", win)
 {
     // Open my text file and check it exists
     IF ##class(%File).Exists(dir) '=1 {
@@ -15,8 +15,7 @@ ClassMethod Import(dir As %String = "//day6.txt", result)
     QUIT}
     ELSE { write "File: "_dir_" is open"}
 
-     
-     // instantiate a new class called file
+    // instantiate a new class called file
     set file = ##class(%Stream.FileCharacter).%New()
     // create a new variable called sc
     set sc = file.LinkToFile(dir)
@@ -28,16 +27,15 @@ ClassMethod Import(dir As %String = "//day6.txt", result)
             set i = i + 1
             continue
         }
-        set result(i, curated) = ""
+        set win(i, curated) = ""
 
         //write !, result(i, curated)
        
     }
-
-    return result
+    return win
 }
 
-ClassMethod AnsweredQuestions(answer1, answer2)
+ClassMethod AnsweredQuestions(result, answer1, answer2)
 {
     set answer1 = 0, answer2 = 0
 	set group = ""
