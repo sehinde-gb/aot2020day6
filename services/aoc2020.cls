@@ -82,9 +82,9 @@ ClassMethod PartOne(dir As %String = "//day6.txt", %result)
 		}
 		set answer1=answer1+anyYes, answer2=answer2+allYes
 	}
-    write !, answer1
-    write !, answer2
-
+    //write !, answer1
+    //write !, answer2
+    write !, %result 
 	//return answer1_"^"_answer2}
 }
 
