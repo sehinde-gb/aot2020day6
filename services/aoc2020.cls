@@ -7,7 +7,7 @@ Property answer1 As %Integer;
 
 Property answer2 As %Integer;
 
-ClassMethod Import(dir As %String = "//day6.txt", win)
+ClassMethod Import(dir As %String = "//day6.txt", result)
 {
     // Open my text file and check it exists
     IF ##class(%File).Exists(dir) '=1 {
@@ -27,7 +27,7 @@ ClassMethod Import(dir As %String = "//day6.txt", win)
             set i = i + 1
             continue
         }
-        set win(i, curated) = ""
+        set result(i, curated) = ""
 
         //write !, result(i, curated)
 
@@ -57,7 +57,7 @@ ClassMethod Import(dir As %String = "//day6.txt", win)
 				set curr = $extract(answer, i)
 				set count(curr) = $get(count(curr)) + 1
 			}
-}
+        }
 
         
 		
