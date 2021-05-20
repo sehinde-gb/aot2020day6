@@ -31,12 +31,15 @@ ClassMethod Import(dir As %String = "//day6.txt", result)
         write !, result(i, curated)
        
     }
+
     s answer1 = 0, answer2 = 0
 	s group = ""
 	
     for {
 		s group = $o(result(group))
 		if group="" quit
+
+        write !, group 
 		
 		k count
 		s answer = ""
@@ -57,8 +60,10 @@ ClassMethod Import(dir As %String = "//day6.txt", result)
 		s ques = ""
 		s anyYes = 0
 		s allYes = 0
-		for {
+		
+        for {
 			s ques = $order(count(ques), 1, targ)
+            write !, ques
 			if ques = "" quit
 			
 			s anyYes = anyYes + 1
@@ -66,8 +71,10 @@ ClassMethod Import(dir As %String = "//day6.txt", result)
 		}
 		s answer1=answer1+anyYes, answer2=answer2+allYes
 	}
-    write !, answer1
-	return answer1_"^"_answer2
+    //write !, answer1
+    //write !, answer2
+
+	//return answer1_"^"_answer2
 }
 
 }
