@@ -20,29 +20,18 @@ ClassMethod Import(dir As %String = "//day6.txt", result)
     set i = 1
     WHILE ('file.AtEnd) {
 
-        set curr = $TRANSLATE(file.ReadLine(), $c(13), "")
-        if curr = "" {
+        set curated = $TRANSLATE(file.ReadLine(), $c(13), "")
+        if curated = "" {
             s i = i + 1
             continue
         }
-        s result(i, curr) = ""
+        s result(i, curated) = ""
 
-        write !, curr
+        write !, curated
     
-        //read line of text from file
-        //set line = file.ReadLine()
-
-        // replacing carriage return with null field
-        //set newline  = $TRANSLATE(line, "abc", "boc")
-        //write $translate(line," ")
-        //write $ZSTRIP(line, "*c","<=>C")
+       
         
-        //write !, newline
-
-        // create nline and go through each line of text from file whilst incrementing the counter
-        //set nline = $INCREMENT(nline)
-     
-        //write !, line
+        
         
 
         // get length of line
