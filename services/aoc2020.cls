@@ -25,10 +25,10 @@ ClassMethod Import(dir As %String = "//day6.txt", result)
 
         set curated = $TRANSLATE(file.ReadLine(), $c(13), "")
         if curated = "" {
-            s i = i + 1
+            set i = i + 1
             continue
         }
-        s result(i, curated) = ""
+        set result(i, curated) = ""
 
         //write !, result(i, curated)
        
