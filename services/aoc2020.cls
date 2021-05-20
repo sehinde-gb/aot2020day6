@@ -4,6 +4,11 @@ Class AOC2020.Day6 Extends %RegisteredObject
 /// Description
 Property result As %String;
 
+Method CountResult()
+{
+    Write "There are ",..result," result.",!
+}
+
 ClassMethod Import(dir As %String = "//day6.txt", result)
 {
     // Open my text file and check it exists
