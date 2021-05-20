@@ -29,12 +29,15 @@ ClassMethod Import(dir As %String = "//day6.txt", result)
 
         write !, curated
 
-        write "There are ",..result," result",!
+        
         
 
         
 
     }
 }
+write "There are ",..result," result",!
+
+
 
 }
