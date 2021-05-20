@@ -32,7 +32,7 @@ ClassMethod PartOne(dir As %String = "//day6.txt", result As %String)
         set result(i, noreturn) = ""
        
     }
-        //write !, result
+        write !, noreturn
 }
 
 ClassMethod PartTwo(result As %String, answer1 As %Integer, answer2 As %Integer)
