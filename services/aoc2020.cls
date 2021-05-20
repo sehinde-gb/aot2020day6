@@ -1,9 +1,9 @@
 Class AOC2020.Day6 Extends %RegisteredObject
 {
 
-/// Description
-Property result As %String;
+// Property result As %String;
 
+/// Description
 /// Description
 ClassMethod Extract()
 {
@@ -67,7 +67,7 @@ ClassMethod Import(dir As %String = "//day6.txt", result)
         }
         s result(i, curated) = ""
 
-        write !, sc
+        write !, result
        
 
     }
