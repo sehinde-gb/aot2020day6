@@ -78,10 +78,10 @@ ClassMethod AnsweredQuestions(result, answer1, answer2)
 		}
 		s answer1=answer1+anyYes, answer2=answer2+allYes
 	}
-    //write !, answer1
+    write !, answer1
     //write !, answer2
 
-	return answer1_"^"_answer2
+	//return answer1_"^"_answer2
 }
 
 }
