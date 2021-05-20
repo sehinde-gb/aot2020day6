@@ -28,10 +28,7 @@ ClassMethod Import(dir As %String = "//day6.txt", result)
         s result(i, curated) = ""
 
         write !, curated
-    
-       
-        
-        
+
         
 
         // get length of line
