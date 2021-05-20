@@ -57,7 +57,7 @@ ClassMethod Import(dir As %String = "//day6.txt", result)
 			}
 		}
 
-        write !, answer
+        
 		
 		s ques = ""
 		s anyYes = 0
@@ -73,7 +73,7 @@ ClassMethod Import(dir As %String = "//day6.txt", result)
 		}
 		s answer1=answer1+anyYes, answer2=answer2+allYes
 	}
-    //write !, answer1
+    write !, answer1
     //write !, answer2
 
 	//return answer1_"^"_answer2
