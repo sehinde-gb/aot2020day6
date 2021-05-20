@@ -23,7 +23,7 @@ ClassMethod PartOne(dir As %String = "//day6.txt", result As %String)
 
     // Iterate over the file and at the carriage return add a null value
     WHILE ('file.AtEnd) {
-        s
+        set day = ##class(AOC2020.Day6).%New()
         set curr = $TRANSLATE(file.ReadLine(), $c(13), "")
         if curr = "" {
             set i = $INCREMENT(i)
