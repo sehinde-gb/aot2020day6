@@ -2,7 +2,7 @@ Class AOC2020.Day6 Extends %RegisteredObject
 {
 
 /// Description
-Property WholeLine As %String;
+Property result As %String;
 
 ClassMethod Import(dir As %String = "//day6.txt", result)
 {
@@ -29,11 +29,10 @@ ClassMethod Import(dir As %String = "//day6.txt", result)
 
         write !, curated
 
+        write !, result
         
 
-        // get length of line
-        //set lline = $LENGTH(line)
-        //write !, lline
+        
 
     }
 }
