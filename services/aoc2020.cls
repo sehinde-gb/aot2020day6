@@ -23,13 +23,13 @@ ClassMethod PartOne(dir As %String = "//day6.txt", result As %String)
 
     // Iterate over the file and at the carriage return add a null value
     WHILE ('file.AtEnd) {
-
-        set file.result = $TRANSLATE(file.ReadLine(), $c(13), "")
-        if file.result = "" {
+        s
+        set curr = $TRANSLATE(file.ReadLine(), $c(13), "")
+        if curr = "" {
             set i = $INCREMENT(i)
             continue
         }
-        set result(i, file.result) = ""
+        set result(i, curr) = ""
        
     }
         //write !, noreturn
