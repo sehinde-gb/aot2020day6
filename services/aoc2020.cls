@@ -32,7 +32,7 @@ ClassMethod Import(dir As %String = "//day6.txt", win)
         //write !, result(i, curated)
        
     }
-    return win
+    //return win
 }
 
 ClassMethod AnsweredQuestions(result, answer1, answer2)
