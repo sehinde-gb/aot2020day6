@@ -85,7 +85,7 @@ ClassMethod PartTwo(result As %String, answer1 As %Integer, answer2 As %Integer)
         set answer1=answer1+anyYes, answer2=answer2+allYes
     }
     write !, answer1
-    //write !, answer2
+    write !, answer2
     //write !, %result 
     //return answer1_"^"_answer2}
 }
