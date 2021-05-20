@@ -36,8 +36,5 @@ ClassMethod Import(dir As %String = "//day6.txt", result)
 
     }
 }
-write "There are ",..result," result",!
-
-
 
 }
