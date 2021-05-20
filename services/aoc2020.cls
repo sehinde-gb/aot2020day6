@@ -20,6 +20,8 @@ ClassMethod Import(dir As %String = "//day6.txt", result)
     // create a new variable called sc
     set sc = file.LinkToFile(dir)
     set i = 1
+
+    // Iterate over the file and at the carriage return add a null value
     WHILE ('file.AtEnd) {
 
         set curated = $TRANSLATE(file.ReadLine(), $c(13), "")
@@ -27,6 +29,8 @@ ClassMethod Import(dir As %String = "//day6.txt", result)
             set i = $INCREMENT(i)
             continue
         }
+
+        /// Assign the value within to result
         set result(i, curated) = ""
 
         //write !, result(i, curated)
