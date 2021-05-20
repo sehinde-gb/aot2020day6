@@ -67,7 +67,7 @@ ClassMethod Import(dir As %String = "//day6.txt", result)
         }
         s result(i, curated) = ""
 
-        write !, result
+        write !, result(i, curated)
        
 
     }
