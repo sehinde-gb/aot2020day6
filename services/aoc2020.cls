@@ -1,7 +1,7 @@
 Class AOC2020.Day6 Extends %RegisteredObject
 {
 
-Property result As %Stream.FileCharacter;
+Property result As %String;
 
 Property answer1 As %Integer;
 
