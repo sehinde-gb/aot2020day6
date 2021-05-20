@@ -7,7 +7,7 @@ Property answer1 As %Integer;
 
 Property answer2 As %Integer;
 
-ClassMethod Import(dir As %String = "//day6.txt", result)
+ClassMethod PartOne(dir As %String = "//day6.txt", result)
 {
     // Open my text file and check it exists
     IF ##class(%File).Exists(dir) '=1 {
@@ -24,38 +24,39 @@ ClassMethod Import(dir As %String = "//day6.txt", result)
     // Iterate over the file and at the carriage return add a null value
     WHILE ('file.AtEnd) {
 
-        set curated = $TRANSLATE(file.ReadLine(), $c(13), "")
-        if curated = "" {
+        set noreturn = $TRANSLATE(file.ReadLine(), $c(13), "")
+        if noreturn = "" {
             set i = $INCREMENT(i)
             continue
         }
 
-        /// Assign the value within to result
-        set result(i, curated) = ""
-
-        //write !, result(i, curated)
-
-
+        /// Assign the value of no return to result
+        set result(i, noreturn) = ""
        
     }
+
+    // initialise the variables 
     set answer1 = 0, answer2 = 0
 	set group = ""
 	
+    // order the result and assign it to the new variable group
     for {
-		set group = $o(result(group))
-		if group="" quit
+		set group = $order(result(group))
+		
+        if group="" quit
 
-        //write !, group 
+        // initialise the answer and people counter
 		
 		k count
 		set answer = ""
-		set numPeople = 0
+		set people = 0
 		
+        //iterate over the answer to find its length and extract it
         for {
-			set answer = $o(result(group, answer))
+			set answer = $order(result(group, answer))
 			if answer="" quit
 			
-			set numPeople = $INCREMENT(numPeople)
+			set people = $INCREMENT(people)
 			
 			for i=1:1:$length(answer) {
 				set curr = $extract(answer, i)
@@ -64,20 +65,22 @@ ClassMethod Import(dir As %String = "//day6.txt", result)
         }
 
         
+		// iterate over the questions and place them in order and if the target 
+        // is equal to the number of people then set all yes otherwise 
+		set ques = ""
+		set anyYes = 0
+		set allYes = 0
 		
-		s ques = ""
-		s anyYes = 0
-		s allYes = 0
-		
+
         for {
-			s ques = $order(count(ques), 1, targ)
-            //write !, ques
+			set ques = $order(count(ques), 1, targ)
+            //write !, 
 			if ques = "" quit
 			
-			s anyYes = $INCREMENT(anyYes)
-			if targ=numPeople s allYes = allYes + 1
+			set anyYes = $INCREMENT(anyYes)
+			if targ=people set allYes = $INCREMENT(allYes)
 		}
-		s answer1=answer1+anyYes, answer2=answer2+allYes
+		set answer1=answer1+anyYes, answer2=answer2+allYes
 	}
     write !, answer1
     write !, answer2
