@@ -32,7 +32,7 @@ ClassMethod PartOne(dir As %String = "//day6.txt", result As %String)
         set result(i, noreturn) = ""
        
     }
-        write !, noreturn
+        //write !, noreturn
  // initialise the variables 
     set answer1 = 0, answer2 = 0
     set group = ""
@@ -141,6 +141,7 @@ ClassMethod PartTwo(result As %String, answer1 As %Integer, answer2 As %Integer)
     //return answer1_"^"_answer2}
 }
 }
+
 
 
 }
