@@ -1,10 +1,12 @@
 Class AOC2020.Day6 Extends %RegisteredObject
 {
 
-// Property result As %String;
+Property result As %String;
 
-/// Description
-/// Description
+Property answer1 As %Integer;
+
+Property answer2 As %Integer;
+
 ClassMethod Import(dir As %String = "//day6.txt", result)
 {
     // Open my text file and check it exists
@@ -32,30 +34,35 @@ ClassMethod Import(dir As %String = "//day6.txt", result)
        
     }
 
-    s answer1 = 0, answer2 = 0
-	s group = ""
+    return result
+}
+
+ClassMethod AnsweredQuestions(answer1, answer2)
+{
+    set answer1 = 0, answer2 = 0
+	set group = ""
 	
     for {
-		s group = $o(result(group))
+		set group = $o(result(group))
 		if group="" quit
 
         //write !, group 
 		
 		k count
-		s answer = ""
-		s numPeople = 0
+		set answer = ""
+		set numPeople = 0
 		
         for {
-			s answer = $o(result(group, answer))
+			set answer = $o(result(group, answer))
 			if answer="" quit
 			
-			s numPeople = numPeople + 1
+			set numPeople = numPeople + 1
 			
 			for i=1:1:$length(answer) {
-				s curr = $extract(answer, i)
-				s count(curr) = $get(count(curr)) + 1
+				set curr = $extract(answer, i)
+				set count(curr) = $get(count(curr)) + 1
 			}
-		}
+}
 
         
 		
@@ -73,10 +80,10 @@ ClassMethod Import(dir As %String = "//day6.txt", result)
 		}
 		s answer1=answer1+anyYes, answer2=answer2+allYes
 	}
-    write !, answer1
-    write !, answer2
+    //write !, answer1
+    //write !, answer2
 
-	//return answer1_"^"_answer2
+	return answer1_"^"_answer2
 }
 
 }
