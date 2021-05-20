@@ -30,13 +30,10 @@ ClassMethod Import(dir As %String = "//day6.txt", win)
         set win(i, curated) = ""
 
         //write !, result(i, curated)
+
+
        
     }
-    //return win
-}
-
-ClassMethod AnsweredQuestions(result, answer1, answer2)
-{
     set answer1 = 0, answer2 = 0
 	set group = ""
 	
@@ -81,7 +78,11 @@ ClassMethod AnsweredQuestions(result, answer1, answer2)
     write !, answer1
     //write !, answer2
 
-	//return answer1_"^"_answer2
+	//return answer1_"^"_answer2}
+
+ClassMethod AnsweredQuestions(result, answer1, answer2)
+{
+}
 }
 
 }
