@@ -70,7 +70,7 @@ ClassMethod Import(dir As %String = "//day6.txt", result)
             //write !, ques
 			if ques = "" quit
 			
-			s anyYes = INCREMENT(anyYes)
+			s anyYes = $INCREMENT(anyYes)
 			if targ=numPeople s allYes = allYes + 1
 		}
 		s answer1=answer1+anyYes, answer2=answer2+allYes
