@@ -29,10 +29,10 @@ ClassMethod PartOne(dir As %String = "//day6.txt", result)
             set i = $INCREMENT(i)
             continue
         }
-        set ^result(i, noreturn) = ""
+        set result(i, noreturn) = ""
        
     }
-        write !, result
+        //write !, result
 }
 
 /// Assign the value of no return to result
