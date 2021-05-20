@@ -65,7 +65,7 @@ ClassMethod Import(dir As %String = "//day6.txt", result)
 		
         for {
 			s ques = $order(count(ques), 1, targ)
-            write !, ques
+            //write !, ques
 			if ques = "" quit
 			
 			s anyYes = anyYes + 1
