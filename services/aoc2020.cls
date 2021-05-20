@@ -48,7 +48,7 @@ ClassMethod Import(dir As %String = "//day6.txt", result)
         for {
 			s answer = $o(result(group, answer))
 			if answer="" quit
-			write !, answer
+			
 			s numPeople = numPeople + 1
 			
 			for i=1:1:$length(answer) {
@@ -56,6 +56,8 @@ ClassMethod Import(dir As %String = "//day6.txt", result)
 				s count(curr) = $get(count(curr)) + 1
 			}
 		}
+
+        write !, answer
 		
 		s ques = ""
 		s anyYes = 0
