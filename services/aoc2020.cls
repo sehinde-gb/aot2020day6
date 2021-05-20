@@ -79,10 +79,6 @@ ClassMethod Import(dir As %String = "//day6.txt", win)
     //write !, answer2
 
 	//return answer1_"^"_answer2}
-
-ClassMethod AnsweredQuestions(result, answer1, answer2)
-{
-}
 }
 
 }
