@@ -24,7 +24,7 @@ ClassMethod Import(dir As %String = "//day6.txt", result)
 
         set curated = $TRANSLATE(file.ReadLine(), $c(13), "")
         if curated = "" {
-            set i = INCREMENT(i)
+            set i = $INCREMENT(i)
             continue
         }
         set result(i, curated) = ""
@@ -51,7 +51,7 @@ ClassMethod Import(dir As %String = "//day6.txt", result)
 			set answer = $o(result(group, answer))
 			if answer="" quit
 			
-			set numPeople = INCREMENT(numPeople)
+			set numPeople = $INCREMENT(numPeople)
 			
 			for i=1:1:$length(answer) {
 				set curr = $extract(answer, i)
