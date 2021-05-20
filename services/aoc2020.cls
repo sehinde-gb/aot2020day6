@@ -1,13 +1,13 @@
 Class AOC2020.Day6 Extends %RegisteredObject
 {
 
-Property %result As %Stream.FileCharacter;
+Property result As %Stream.FileCharacter;
 
 Property answer1 As %Integer;
 
 Property answer2 As %Integer;
 
-ClassMethod PartOne(dir As %String = "//day6.txt", %result)
+ClassMethod PartOne(dir As %String = "//day6.txt")
 {
     // Open my text file and check it exists
     IF ##class(%File).Exists(dir) '=1 {
@@ -29,13 +29,12 @@ ClassMethod PartOne(dir As %String = "//day6.txt", %result)
             set i = $INCREMENT(i)
             continue
         }
-
-        /// Assign the value of no return to result
-        set result(i, noreturn) = ""
+        set ^result(i, noreturn) = ""
        
     }
-
-    write
+        write !, ^result
 }
+
+/// Assign the value of no return to result
 
 }
