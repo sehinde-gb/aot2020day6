@@ -81,8 +81,8 @@ ClassMethod PartOne(dir As %String = "//day6.txt", result As %String)
         }
         set answer1=answer1+anyYes, answer2=answer2+allYes
     }
-    set landing.answer1 = answer1
-    set landing.answer2 = answer2
+    //set landing.answer1 = answer1
+    //set landing.answer2 = answer2
 
     //write !, answer1
     //write !, answer2
