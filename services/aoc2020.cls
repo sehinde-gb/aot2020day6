@@ -34,15 +34,13 @@ ClassMethod PartOne(dir As %String = "//day6.txt", result, answer As %Integer)
     set input.result = cards
     write !, input.result
 
-    set status=input.%Save()
-    if $$$ISERR(status) {
-        do $SYSTEM.status.DisplayError(status)
-    }
+    
 
     // initialise the variables 
     set answer1 = 0, answer2 = 0
     set group = ""
     
+    write ! 
     // order the result and assign it to the new variable group
     for {
         set group = $order(input.result(group))
@@ -98,6 +96,11 @@ ClassMethod PartOne(dir As %String = "//day6.txt", result, answer As %Integer)
 }
 }
 }
+
+
+
+
+
 
 
 
