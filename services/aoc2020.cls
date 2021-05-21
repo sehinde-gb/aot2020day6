@@ -33,9 +33,6 @@ ClassMethod PartOne(dir As %String = "//day6.txt", result As %String)
         set ^myresult = result(i, cards)
         write !, ^myresult
         
-        //set input = ##class(AOC2020.Day6).%New()
-        //set input.result = result(i, cards)
-        //write !,input.result
     }
 
     
@@ -47,7 +44,7 @@ ClassMethod PartOne(dir As %String = "//day6.txt", result As %String)
 
     // order the result and assign it to the new variable group
     for {
-        set group = $order(result(group))
+        set group = $order(^result(group))
         
         if group="" quit
 
@@ -59,7 +56,7 @@ ClassMethod PartOne(dir As %String = "//day6.txt", result As %String)
         
         //iterate over the answer to find its length and extract it
         for {
-            set answer = $order(result(group, answer))
+            set answer = $order(^result(group, answer))
             if answer="" quit
             
             set people = $INCREMENT(people)
@@ -89,14 +86,10 @@ ClassMethod PartOne(dir As %String = "//day6.txt", result As %String)
         set answer1=answer1+anyYes, answer2=answer2+allYes
     
 
-    set input = ##class(AOC2020.Day6).%New()
-    set input.answer1 = answer1
-    set input.answer2 = answer2
-    write !, input.answer1
-    write !, input.answer2
     
-    //set input.answer = answer1_"^"_answer2
-    //write !, answer1
+    
+    set ^answer = answer1_"^"_answer2
+    write !, ^answer1
     //write !, answer2
     
     //write !, %result 
