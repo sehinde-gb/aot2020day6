@@ -23,15 +23,16 @@ ClassMethod PartOne(dir As %String = "//day6.txt", result As %String)
 
     // Iterate over the file and at the carriage return add a null value
     WHILE ('file.AtEnd) {
-        set input = ##class(AOC2020.Day6).%New()
+        //set input = ##class(AOC2020.Day6).%New()
         set cards = $TRANSLATE(file.ReadLine(), $c(13), "")
         if cards = "" {
             set i = $INCREMENT(i)
             continue
         }
         set result(i, cards) = ""
-        write !, result(i)
+        
     }
+    write !, cards
         
  // initialise the variables 
     set answer1 = 0, answer2 = 0
