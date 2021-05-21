@@ -32,6 +32,7 @@ ClassMethod PartOne(dir As %String = "//day6.txt", result As %String)
         set result(i, cards) = ""
         set input = ##class(AOC2020.Day6).%New()
         set input.result = result(i, cards)
+        write input.result
     }
 }
 
