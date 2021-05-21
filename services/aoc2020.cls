@@ -75,8 +75,8 @@ Method PartTwo() As %Status
     //write !, %result 
     //return answer1_"^"_answer2}
 
-    }
 }
+
 
 Method PartOne(dir As %String = "//day6.txt", answer As %Integer)
 {
@@ -169,6 +169,7 @@ Method PartOne(dir As %String = "//day6.txt", answer As %Integer)
     
     //write !, %result 
     //return answer1_"^"_answer2}
+}
 }
 }
 
