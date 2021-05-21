@@ -1,11 +1,11 @@
 Class AOC2020.Day6 Extends %RegisteredObject
 {
 
-Property result As %String;
+Property result [ MultiDimensional ];
 
 Property answer As %Integer;
 
-ClassMethod PartOne(dir As %String = "//day6.txt", result As %String, answer As %Integer)
+ClassMethod PartOne(dir As %String = "//day6.txt", result, answer As %Integer)
 {
     // Open my text file and check it exists
     IF ##class(%File).Exists(dir) '=1 {
