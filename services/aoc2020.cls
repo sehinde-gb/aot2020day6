@@ -1,13 +1,13 @@
 Class AOC2020.Day6 Extends %RegisteredObject
 {
 
-Property cards As %String;
+Property result As %String;
 
 Property answer1 As %Integer;
 
 Property answer2 As %Integer;
 
-ClassMethod PartOne(dir As %String = "//day6.txt", cards As %String)
+ClassMethod PartOne(dir As %String = "//day6.txt", result As %String)
 {
     // Open my text file and check it exists
     IF ##class(%File).Exists(dir) '=1 {
@@ -29,8 +29,8 @@ ClassMethod PartOne(dir As %String = "//day6.txt", cards As %String)
             set i = $INCREMENT(i)
             continue
         }
-        set cards(i, landing.cards) = ""
-        write !, cards
+        set result(i, landing.cards) = ""
+        write !, result
     }
         
  // initialise the variables 
