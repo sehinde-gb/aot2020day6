@@ -87,7 +87,7 @@ ClassMethod PartOne(dir As %String = "//day6.txt", result, answer As %Integer)
     
     set input = ##class(AOC2020.Day6).%New()
     set input.answer1 = answer1
-    set input.answer2 = answer2
+    //set input.answer2 = answer2
     write !, input.answer1
 
     
