@@ -7,7 +7,7 @@ Property answer1 As %Integer;
 
 Property answer2 As %Integer;
 
-ClassMethod PartOne(dir As %String = "//day6.txt", result, answer As %Integer)
+ClassMethod PartOne(dir As %String = "//day6.txt", answer As %Integer)
 {
     // Open my text file and check it exists
     IF ##class(%File).Exists(dir) '=1 {
@@ -65,7 +65,7 @@ ClassMethod PartOne(dir As %String = "//day6.txt", result, answer As %Integer)
                 set curr = $extract(answer, i)
                 set count(curr) = $get(count(curr)) + 1
             }
-}
+    }
 
         
         // iterate over the questions and place them in order and if the target 
@@ -85,6 +85,7 @@ ClassMethod PartOne(dir As %String = "//day6.txt", result, answer As %Integer)
         }
         set answer1=answer1+anyYes, answer2=answer2+allYes
     
+
     set input = ##class(AOC2020.Day6).%New()
     set input.answer1 = answer1
     set input.answer2 = answer2
