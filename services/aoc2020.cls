@@ -40,12 +40,11 @@ ClassMethod PartOne(dir As %String = "//day6.txt", result, answer As %Integer)
     set answer1 = 0, answer2 = 0
     set group = ""
     
-    write !, answer1
-    write !, answer2
+    
 
     // order the result and assign it to the new variable group
     for {
-        set group = $order(input.result(group))
+        set group = $order(result(group))
         
         if group="" quit
 
@@ -57,7 +56,7 @@ ClassMethod PartOne(dir As %String = "//day6.txt", result, answer As %Integer)
         
         //iterate over the answer to find its length and extract it
         for {
-            set answer = $order(input.result(group, answer))
+            set answer = $order(result(group, answer))
             if answer="" quit
             
             set people = $INCREMENT(people)
