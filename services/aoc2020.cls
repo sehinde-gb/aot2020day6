@@ -7,7 +7,7 @@ Property answer1 As %Integer;
 
 Property answer2 As %Integer;
 
-ClassMethod PartOne(dir As %String = "//day6.txt", result As %String)
+ClassMethod PartOne(dir As %String = "//day6.txt", cards As %String)
 {
     // Open my text file and check it exists
     IF ##class(%File).Exists(dir) '=1 {
@@ -23,14 +23,14 @@ ClassMethod PartOne(dir As %String = "//day6.txt", result As %String)
 
     // Iterate over the file and at the carriage return add a null value
     WHILE ('file.AtEnd) {
-        set day = ##class(AOC2020.Day6).%New()
-        set day.result = $TRANSLATE(file.ReadLine(), $c(13), "")
-        if day.result = "" {
+        set landing = ##class(AOC2020.Day6).%New()
+        set landing.cards = $TRANSLATE(file.ReadLine(), $c(13), "")
+        if landing.cards = "" {
             set i = $INCREMENT(i)
             continue
         }
-        set result(i, day.result) = ""
-        write !, day.result
+        set result(i, landing.cards) = ""
+        write !, landing.cards
     }
         //write !, noreturn
  // initialise the variables 
@@ -80,8 +80,8 @@ ClassMethod PartOne(dir As %String = "//day6.txt", result As %String)
         }
         set answer1=answer1+anyYes, answer2=answer2+allYes
     }
-    write !, answer1
-    write !, answer2
+    //write !, answer1
+    //write !, answer2
     //write !, %result 
     //return answer1_"^"_answer2}}
 }
