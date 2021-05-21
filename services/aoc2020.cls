@@ -7,7 +7,7 @@ Property answer1 As %Integer;
 
 Property answer2 As %Integer;
 
-Method PartOne(dir As %String = "//day6.txt", answer As %Integer)
+ClassMethod PartOne(dir As %String = "//day6.txt", answer1 As %Integer, answer2 As %Integer)
 {
     // Open my text file and check it exists
     IF ##class(%File).Exists(dir) '=1 {
@@ -99,6 +99,20 @@ Method PartOne(dir As %String = "//day6.txt", answer As %Integer)
     //write !, %result 
     //return answer1_"^"_answer2}
 }
+}
+
+/// a public method with an argument and a return value
+ClassMethod Public(num As %Numeric) As %String
+{
+    write !, "my favorite number is ", num
+    return "This is my return value!!!"
+}
+
+/// demo of public and private methods, along with a public variable
+ClassMethod PrivatePublic()
+{
+
+    do ..Public(9)   // call a public method
 }
 
 }
