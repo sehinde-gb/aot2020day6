@@ -5,6 +5,8 @@ Property result [ MultiDimensional ];
 
 Property answer1 As %Integer;
 
+Property answer2 As %Integer;
+
 ClassMethod PartOne(dir As %String = "//day6.txt", result, answer As %Integer)
 {
     // Open my text file and check it exists
