@@ -29,8 +29,8 @@ ClassMethod PartOne(dir As %String = "//day6.txt", cards As %String)
             set i = $INCREMENT(i)
             continue
         }
-        set result(i, landing.cards) = ""
-        write !, landing.cards
+        set cards(i, landing.cards) = ""
+        write !, cards
     }
         
  // initialise the variables 
