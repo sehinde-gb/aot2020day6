@@ -62,11 +62,11 @@ ClassMethod PartTwo() As %Status
         set answer1=answer1+anyYes, answer2=answer2+allYes
     
 
-    set input = ##class(AOC2020.Day6).%New()
-    set input.answer1 = answer1
-    set input.answer2 = answer2
-    write !, input.answer1
-    write !, input.answer2
+        set input = ##class(AOC2020.Day6).%New()
+        set input.answer1 = answer1
+        set input.answer2 = answer2
+        write !, input.answer1
+        write !, input.answer2
     
     //set input.answer = answer1_"^"_answer2
     //write !, answer1
@@ -75,6 +75,7 @@ ClassMethod PartTwo() As %Status
     //write !, %result 
     //return answer1_"^"_answer2}
 
+}
 }
 
 ClassMethod PartOne(dir As %String = "//day6.txt", answer As %Integer)
@@ -171,5 +172,6 @@ ClassMethod PartOne(dir As %String = "//day6.txt", answer As %Integer)
 }
 }
 }
+
 
 }
