@@ -3,11 +3,9 @@ Class AOC2020.Day6 Extends %RegisteredObject
 
 Property result As %String;
 
-Property answer1 As %Integer;
+Property answer As %Integer;
 
-Property answer2 As %Integer;
-
-ClassMethod PartOne(dir As %String = "//day6.txt", result As %String)
+ClassMethod PartOne(dir As %String = "//day6.txt", result As %String, answer As %Integer)
 {
     // Open my text file and check it exists
     IF ##class(%File).Exists(dir) '=1 {
@@ -32,7 +30,6 @@ ClassMethod PartOne(dir As %String = "//day6.txt", result As %String)
         set result(i, cards) = ""
         write !, cards
     }
-
     set input = ##class(AOC2020.Day6).%New()
     set input.result = cards
     write !, input.result
@@ -65,7 +62,7 @@ ClassMethod PartOne(dir As %String = "//day6.txt", result As %String)
                 set curr = $extract(answer, i)
                 set count(curr) = $get(count(curr)) + 1
             }
-        }
+    }
 
         
         // iterate over the questions and place them in order and if the target 
@@ -84,16 +81,17 @@ ClassMethod PartOne(dir As %String = "//day6.txt", result As %String)
             if targ=people set allYes = $INCREMENT(allYes)
         }
         set answer1=answer1+anyYes, answer2=answer2+allYes
-    }
+    
     
 
     
-    set input.answer1 = answer1
-    set input.answer2 = answer2
-    write !, input.answer1
-    write !, input.answer2
+    set input.answer = answer1_"^"_answer2
+    //set input.answer2 = answer2
+    
     //write !, %result 
     //return answer1_"^"_answer2}}
+
+}
 }
 
 }
