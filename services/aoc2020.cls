@@ -6,16 +6,17 @@ Property result;
 Property answer1 As %Integer;
 
 Property answer2 As %Integer;
-ClassMethod PartOne(dir As %String = "//day6.txt", result As )
+
+ClassMethod PartOne(dir As %String = "//day6.txt", result As %String)
 {
     // Open my text file and check it exists
     IF ##class(%File).Exists(dir) '=1 {
     write !, "Unable to Open: "_dir
     QUIT}
-ELSE { write "File: "_dir_" is open"}
+    ELSE { write "File: "_dir_" is open"}
 
-// instantiate a new class called file
-set file = ##class(%Stream.FileCharacter).%New()
+    // instantiate a new class called file
+    set file = ##class(%Stream.FileCharacter).%New()
     // create a new variable called sc
     set sc = file.LinkToFile(dir)
     set i = 1
@@ -28,7 +29,7 @@ set file = ##class(%Stream.FileCharacter).%New()
             set i = $INCREMENT(i)
             continue
         }
-set result(i, cards) = ""
+        set result(i, cards) = ""
         set input = ##class(AOC2020.Day6).%New()
         set input.result = result(i, cards)
         write !,input.result
@@ -55,8 +56,5 @@ ClassMethod PrivatePublic()
 
     do ..Public(9)   // call a public method
 }
-
-
-
 
 }
