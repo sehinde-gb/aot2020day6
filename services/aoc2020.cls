@@ -30,13 +30,16 @@ ClassMethod PartOne(dir As %String = "//day6.txt", result As %String)
             continue
         }
         set result(i, cards) = ""
+        set ^myresult = result(i, cards)
+
+        
         set input = ##class(AOC2020.Day6).%New()
         set input.result = result(i, cards)
         write !,input.result
     }
 
-
-     // initialise the variables 
+    
+    // initialise the variables 
     set answer1 = 0, answer2 = 0
     set group = ""
     
@@ -65,7 +68,7 @@ ClassMethod PartOne(dir As %String = "//day6.txt", result As %String)
                 set curr = $extract(answer, i)
                 set count(curr) = $get(count(curr)) + 1
             }
-    }
+}
 
         
         // iterate over the questions and place them in order and if the target 
