@@ -1,7 +1,7 @@
 Class AOC2020.Day6 Extends %RegisteredObject
 {
 
-Property result As %String;
+Property cards As %String;
 
 Property answer1 As %Integer;
 
