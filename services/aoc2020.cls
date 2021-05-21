@@ -100,6 +100,7 @@ ClassMethod PartOne(dir As %String = "//day6.txt", result As %String)
     //return answer1_"^"_answer2}
 
 }
+}
 
 /// a public method with an argument and a return value
 ClassMethod PartTwo(num As %Numeric) As %String
@@ -122,5 +123,6 @@ ClassMethod PrivatePublic()
     do ..Public(9)   // call a public method
 }
 }
+
 
 }
