@@ -28,7 +28,7 @@ ClassMethod PartOne(dir As %String = "//day6.txt", result, answer As %Integer)
             continue
         }
         set result(i, cards) = ""
-        write !, cards
+        //write !, cards
     }
     set input = ##class(AOC2020.Day6).%New()
     set input.result = cards
@@ -86,7 +86,7 @@ ClassMethod PartOne(dir As %String = "//day6.txt", result, answer As %Integer)
 
     
     set input.answer = answer1_"^"_answer2
-    //set input.answer2 = answer2
+    write !, input.answer
     
     //write !, %result 
     //return answer1_"^"_answer2}}
