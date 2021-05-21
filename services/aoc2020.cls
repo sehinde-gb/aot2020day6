@@ -30,9 +30,9 @@ ClassMethod PartOne(dir As %String = "//day6.txt", result As %String)
             continue
         }
         set result(i, cards) = ""
-        write !, cards
+        //write !, cards
     }
-    
+    set Day6.
         
  // initialise the variables 
     set answer1 = 0, answer2 = 0
