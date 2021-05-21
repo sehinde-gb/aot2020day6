@@ -3,7 +3,7 @@ Class AOC2020.Day6 Extends %RegisteredObject
 
 Property result [ MultiDimensional ];
 
-Property answer As %Integer;
+Property answer1 As %Integer;
 
 ClassMethod PartOne(dir As %String = "//day6.txt", result, answer As %Integer)
 {
