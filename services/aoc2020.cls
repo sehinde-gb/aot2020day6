@@ -1,13 +1,7 @@
 Class AOC2020.Day6 Extends %RegisteredObject
 {
 
-Property result As %String;
-
-Property answer1 As %Integer;
-
-Property answer2 As %Integer;
-
-ClassMethod PartOne(dir As %String = "//day6.txt", result As %String)
+ClassMethod PartOneTwo(dir As %String = "//day6.txt", result As %String)
 {
     // Open my text file and check it exists
     IF ##class(%File).Exists(dir) '=1 {
@@ -31,7 +25,7 @@ ClassMethod PartOne(dir As %String = "//day6.txt", result As %String)
         }
         set result(i, cards) = ""
         set ^myresult = result(i, cards)
-        write !, cards
+        //write !, cards
         
     }
 
@@ -89,11 +83,7 @@ ClassMethod PartOne(dir As %String = "//day6.txt", result As %String)
     
     
     set ^answer = answer1_"^"_answer2
-    //write !, ^answer
-    //write !, answer2
     
-    //write !, %result 
-    //return answer1_"^"_answer2}
 
 }
 }
