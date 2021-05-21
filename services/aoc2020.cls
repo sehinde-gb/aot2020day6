@@ -122,7 +122,5 @@ ClassMethod PrivatePublic()
 
     do ..Public(9)   // call a public method
 }
-}
-
 
 }
