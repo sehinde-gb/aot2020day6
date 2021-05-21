@@ -1,7 +1,7 @@
 Class AOC2020.Day6 Extends %RegisteredObject
 {
 
-Property result As %String;
+Property result As %Stream.FileCharacter;
 
 Property answer1 As %Integer;
 
@@ -23,17 +23,20 @@ ClassMethod PartOne(dir As %String = "//day6.txt", result As %String)
 
     // Iterate over the file and at the carriage return add a null value
     WHILE ('file.AtEnd) {
-        //set input = ##class(AOC2020.Day6).%New()
+        
         set cards = $TRANSLATE(file.ReadLine(), $c(13), "")
         if cards = "" {
             set i = $INCREMENT(i)
             continue
         }
         set result(i, cards) = ""
-        //write !, cards
+        write !, cards
     }
-    set Day6.
-        
+
+    set input = ##class(AOC2020.Day6).%New()
+    set input.result = cards
+    write !, input.result 
+
  // initialise the variables 
     set answer1 = 0, answer2 = 0
     set group = ""
