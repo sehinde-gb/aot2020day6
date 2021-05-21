@@ -8,7 +8,7 @@ Property answer1 As %Integer;
 Property answer2 As %Integer;
 
 /// Description
-ClassMethod PartTwo() As %Status
+Method PartTwo() As %Status
 {
    Do ..PartOne()
 
@@ -78,7 +78,7 @@ ClassMethod PartTwo() As %Status
 }
 }
 
-ClassMethod PartOne(dir As %String = "//day6.txt", answer As %Integer)
+Method PartOne(dir As %String = "//day6.txt", answer As %Integer)
 {
     // Open my text file and check it exists
     IF ##class(%File).Exists(dir) '=1 {
@@ -172,6 +172,8 @@ ClassMethod PartOne(dir As %String = "//day6.txt", answer As %Integer)
 }
 }
 }
+
+
 
 
 }
