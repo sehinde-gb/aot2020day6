@@ -40,7 +40,9 @@ ClassMethod PartOne(dir As %String = "//day6.txt", result, answer As %Integer)
     set answer1 = 0, answer2 = 0
     set group = ""
     
-    write ! 
+    write !, answer1
+    write !, answer2
+
     // order the result and assign it to the new variable group
     for {
         set group = $order(input.result(group))
@@ -89,20 +91,12 @@ ClassMethod PartOne(dir As %String = "//day6.txt", result, answer As %Integer)
     
     //set input.answer = answer1_"^"_answer2
     write !, answer1
+    write !, answer2
     
     //write !, %result 
     //return answer1_"^"_answer2}}
 
 }
 }
-}
-
-
-
-
-
-
-
-
 
 }
