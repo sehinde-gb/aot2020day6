@@ -34,6 +34,10 @@ ClassMethod PartOne(dir As %String = "//day6.txt", result, answer As %Integer)
     set input.result = cards
     write !, input.result
 
+    set status=input.%Save()
+    if $$$ISERR(status) {
+        do $SYSTEM.status.DisplayError(status)
+    }
 
     // initialise the variables 
     set answer1 = 0, answer2 = 0
@@ -62,7 +66,7 @@ ClassMethod PartOne(dir As %String = "//day6.txt", result, answer As %Integer)
                 set curr = $extract(answer, i)
                 set count(curr) = $get(count(curr)) + 1
             }
-    }
+}
 
         
         // iterate over the questions and place them in order and if the target 
@@ -93,5 +97,9 @@ ClassMethod PartOne(dir As %String = "//day6.txt", result, answer As %Integer)
 
 }
 }
+}
+
+
+
 
 }
