@@ -32,7 +32,7 @@ ClassMethod PartOne(dir As %String = "//day6.txt", cards As %String)
         set result(i, landing.cards) = ""
         write !, landing.cards
     }
-        //write !, noreturn
+        
  // initialise the variables 
     set answer1 = 0, answer2 = 0
     set group = ""
@@ -80,8 +80,8 @@ ClassMethod PartOne(dir As %String = "//day6.txt", cards As %String)
         }
         set answer1=answer1+anyYes, answer2=answer2+allYes
     }
-    //write !, answer1
-    //write !, answer2
+    write !, answer1
+    write !, answer2
     //write !, %result 
     //return answer1_"^"_answer2}}
 }
