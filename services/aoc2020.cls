@@ -31,7 +31,7 @@ ClassMethod PartOne(dir As %String = "//day6.txt", result As %String)
         }
         set result(i, cards) = ""
         set ^myresult = result(i, cards)
-        write !, ^myresult
+        write !, cards
         
     }
 
