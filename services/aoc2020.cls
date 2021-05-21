@@ -7,6 +7,76 @@ Property answer1 As %Integer;
 
 Property answer2 As %Integer;
 
+/// Description
+ClassMethod PartTwo() As %Status
+{
+   Do ..PartOne()
+
+   // initialise the variables 
+    set answer1 = 0, answer2 = 0
+    set group = ""
+    
+    
+
+    // order the result and assign it to the new variable group
+    for {
+        set group = $order(result(group))
+        
+        if group="" quit
+
+        // initialise the answer and people counter
+        
+        k count
+        set answer = ""
+        set people = 0
+        
+        //iterate over the answer to find its length and extract it
+        for {
+            set answer = $order(result(group, answer))
+            if answer="" quit
+            
+            set people = $INCREMENT(people)
+            
+            for i=1:1:$length(answer) {
+                set curr = $extract(answer, i)
+                set count(curr) = $get(count(curr)) + 1
+            }
+    }
+
+        
+        // iterate over the questions and place them in order and if the target 
+        // is equal to the number of people then set all yes otherwise 
+        set ques = ""
+        set anyYes = 0
+        set allYes = 0
+        
+
+        for {
+            set ques = $order(count(ques), 1, targ)
+            //write !, 
+            if ques = "" quit
+            
+            set anyYes = $INCREMENT(anyYes)
+            if targ=people set allYes = $INCREMENT(allYes)
+        }
+        set answer1=answer1+anyYes, answer2=answer2+allYes
+    
+
+    set input = ##class(AOC2020.Day6).%New()
+    set input.answer1 = answer1
+    set input.answer2 = answer2
+    write !, input.answer1
+    write !, input.answer2
+    
+    //set input.answer = answer1_"^"_answer2
+    //write !, answer1
+    //write !, answer2
+    
+    //write !, %result 
+    //return answer1_"^"_answer2}
+
+}
+
 ClassMethod PartOne(dir As %String = "//day6.txt", answer As %Integer)
 {
     // Open my text file and check it exists
@@ -98,6 +168,7 @@ ClassMethod PartOne(dir As %String = "//day6.txt", answer As %Integer)
     
     //write !, %result 
     //return answer1_"^"_answer2}
+}
 }
 }
 
