@@ -23,7 +23,8 @@ ClassMethod Import(dir As %String = "/usr/local/day6.txt", result As %String)
         write !, "Loop started"
         write *32
         write line,!
-        set answers(count)=$LISTFROMSTRING(line, delim)
+
+        set answers=$LISTFROMSTRING(line, delim)
         set countdown=$LENGTH(line,delim)
         set count=$INCREMENT(count)
  
@@ -43,9 +44,9 @@ ClassMethod LetterstoHex()
 {
     set hex=""
 
-    for i=1:1:$I(abc) 
-        set hex=hex_$ZHEX($ASCII($e("abc")))
-        write "Hexadecimal: ",hex ,!
+    for i=1:1:$I(c) 
+        set hex=hex_$ZHEX($ASCII($e("c")))
+        write "Decimal (Last 3 bits): ",hex ,!
 }
 
 }
