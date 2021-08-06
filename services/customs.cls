@@ -39,4 +39,13 @@ ClassMethod Import(dir As %String = "/usr/local/day6.txt", result As %String)
         //do ##class(Passport.Processing).Process()
 }
 
+ClassMethod LetterstoHex()
+{
+    set hex=""
+
+    for i=1:1:$I(abc) 
+        set hex=hex_$ZHEX($ASCII($e("abc")))
+        write "Hexadecimal: ",hex ,!
+}
+
 }
