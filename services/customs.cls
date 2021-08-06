@@ -1,7 +1,7 @@
 Class Binary.Customs Extends %RegisteredObject
 {
 
-ClassMethod Import(dir As %String = "/user/local/day6.txt", result As %String)
+ClassMethod Import(dir As %String = "/usr/local/day6.txt", result As %String)
 {
     // Open my text file and check it exists
     IF ##class(%File).Exists(dir) '=1 {
