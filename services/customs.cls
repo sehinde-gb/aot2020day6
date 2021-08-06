@@ -1,4 +1,4 @@
-Class AOC2020.Day6 Extends %RegisteredObject
+Class Custom.Customs Extends %RegisteredObject
 {
 
 ClassMethod PartOneTwo(dir As %String = "//day6.txt", result As %String)
