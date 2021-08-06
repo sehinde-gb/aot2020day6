@@ -1,7 +1,7 @@
-Class Custom.Customs Extends %RegisteredObject
+Class Binary.Customs Extends %RegisteredObject
 {
 
-ClassMethod PartOneTwo(dir As %String = "//day6.txt", result As %String)
+ClassMethod PartOneTwo(dir As %String = "/user/local/day6.txt", result As %String)
 {
     // Open my text file and check it exists
     IF ##class(%File).Exists(dir) '=1 {
