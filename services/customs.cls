@@ -46,7 +46,55 @@ ClassMethod LetterstoHex()
 
     for i=1:1:$I(c) 
         set hex=hex_$ZHEX($ASCII($e("c")))
-        write "Decimal (Last 3 bits): ",hex ,!
+        write "Decimal: ",hex ,!
+}
+
+ClassMethod DecimalToBinary(ByRef dec As %Integer)
+{
+                
+    //write hex ,!
+    set dec=61
+    for i=1:1:16 
+        {set $BIT(a,i) = $BIT($FACTOR(dec),i)}
+            write !,"Number of 1 bits=",$BITCOUNT($FACTOR(dec),1)
+            write !,"bitstring a=",$BIT(a,1),$BIT(a,2),$BIT(a,3),$BIT(a,4),$BIT(a,5),$BIT(a,6)
+            write !,*32
+            zwrite a
+                                
+    set dec=62
+    for i=1:1:16 
+        {set $BIT(b,i) = $BIT($FACTOR(dec),i)}
+            write !,"Number of 1 bits=",$BITCOUNT($FACTOR(dec),1)
+            write !,"bitstring b=",$BIT(b,1),$BIT(b,2),$BIT(b,3),$BIT(b,4),$BIT(b,5),$BIT(b,6)
+            write !,*32
+            zwrite b             
+                 
+    set dec= 63 
+    for i=1:1:16 {set $BIT(c,i) = $BIT($FACTOR(dec),i) }
+            write !,"Number of 1 bits=",$BITCOUNT($FACTOR(dec),1)
+            write !,"bitstring c=",$BIT(c,1),$BIT(c,2),$BIT(c,3),$BIT(c,4),$BIT(c,5),$BIT(c,6)
+            write !,*32
+            zwrite c
+}
+
+/// Description
+ClassMethod LogicBit()
+{
+    // Set a to [1,1]
+   SET $BIT(a,1) = 1
+   SET $BIT(a,2) = 1
+   // Set b to [0,1]
+   SET $BIT(b,1) = 0
+   SET $BIT(b,2) = 1
+   WRITE !,"bitstring a=",$BIT(a,1),$BIT(a,2)
+   WRITE !,"bitstring b=",$BIT(b,1),$BIT(b,2)
+   SET c = $BITLOGIC(~b)
+   WRITE !,"The one's complement of b=",$BIT(c,1),$BIT(c,2)
+   // Find the intersection (AND) of a and b
+   SET c = $BITLOGIC(a&b)   // c should be [0,1]}
+   WRITE !,"The AND of a and b=",$BIT(c,1),$BIT(c,2)
+   SET c = $BITLOGIC(a&~b)   // c should be [1,0]
+   WRITE !,"The AND of a and ~b=",$BIT(c,1),$BIT(c,2)
 }
 
 }
