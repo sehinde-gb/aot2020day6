@@ -14,35 +14,51 @@ ClassMethod Import(dir As %String = "/usr/local/day6.txt", answers As %DynamicAr
             // create a new variable called sc
             set sc = file.LinkToFile(dir)
             set count=1
-            kill ^dec
-            set ^dec=" "
-            kill ^answers
+           
+            
             /// loop to go through each line and save it to a global that increments
             
             WHILE ('file.AtEnd) 
             {
                 set delim=" "
                 set line = file.ReadLine()
-
+                set i=1
                 
                 write !, "Loop started"
                 write *32
-                write line,!
+                //write line,!
 
-                set ^answers(count)=$LISTFROMSTRING(line, delim)
+                if (line '="") {
+                     write !, "Read started"
+                     write *32
+                     set ^answers(count)=$LISTFROMSTRING(line, delim)
+                     set readvalue = $EXTRACT(line,i,i)
+                     write *32
+                     write "Value",readvalue ,!
+                     set ^attempt(count)=^attempt(count)_$ZHEX(($ASCII($LIST(^answers(count)))))
+                     write "Attempt:", ^attempt(count) ,!
+                     set countdown=$LENGTH(line,delim)
+                     set i=$INCREMENT(i)
+                     set count=$INCREMENT(count)
+                }
+               
+
                 
-                set ^dec=^dec_$ZHEX($ASCII($e(^answers(count))))
-                set countdown=$LENGTH(line,delim)
-                set count=$INCREMENT(count)
+                
         
             }
+                set lamb=""
                 write !,*32
-                write ^dec
+                //write ^dec
                 write !, "Double checking"
                 write !,*32
                 write !, "1st element of answers array: ", $LIST(^answers(1))
-                //set dec=dec_$ZHEX($ASCII($e(^answers(count))))
-                write !, "3rd element of answers array: ", $LIST(^answers(3))
+                //write ^dec = $ZHEX($ASCII($e(54)))
+                //set dec(count)=dec(count)_$ZHEX($ASCII($e(^answers(count))))
+                
+               
+                
+                //write !, "3rd element of answers array: ", $LIST(^answers(3))
                 //set element(3) = $LIST(answers(3))
                 write !, "Import process complete"
                 write *32
