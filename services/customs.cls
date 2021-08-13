@@ -32,9 +32,9 @@ ClassMethod Import(dir As %String = "/usr/local/day6.txt", answers As %DynamicAr
                      write !, "Read started"
                      write *32
                      set ^answers(count)=$LISTFROMSTRING(line, delim)
-                     set readvalue = $EXTRACT(line,i,i)
+                     //set readvalue = $EXTRACT(line,i,i)
                      write *32
-                     write "Value",readvalue ,!
+                     //write "Value",readvalue ,!
                      set ^attempt(count)=^attempt(count)_$ZHEX(($ASCII($LIST(^answers(count)))))
                      write "Attempt:", ^attempt(count) ,!
                      set countdown=$LENGTH(line,delim)
@@ -84,5 +84,107 @@ ClassMethod LetterstoDecimal()
     //write "Decimal:",dec ,!
     //do ##class(Binary.Customs).DecimalToBinary(dec)
 }
+
+// ClassMethod DecimalToBinary(ByRef dec As %Integer)
+
+// {
+
+//         //write hex ,!
+
+//         //set dec=61
+
+//         write "Decimal:",dec ,!
+
+//         for i=1:1:16 
+
+//             {set $BIT(a,i) = $BIT($FACTOR(dec),i)}
+
+//                 write !,"Number of 1 bits=",$BITCOUNT($FACTOR(dec),1)
+
+//                 write !,"bitstring a=",$BIT(a,1),$BIT(a,2),$BIT(a,3),$BIT(a,4),$BIT(a,5),$BIT(a,6)
+
+//                 write !,"bitstring c/3=",$BIT(a,3)
+
+//                 write !,*32
+
+//                 zwrite a
+
+// #;set dec=62
+
+//         #;for i=1:1:16 
+
+//         #;{set $BIT(b,i) = $BIT($FACTOR(dec),i)}
+
+// #;write !,"Number of 1 bits=",$BITCOUNT($FACTOR(dec),1)
+
+//         #;write !,"bitstring b=",$BIT(b,1),$BIT(b,2),$BIT(b,3),$BIT(b,4),$BIT(b,5),$BIT(b,6)
+
+//         #;write !,"bitstring b/2=",$BIT(b,2)
+
+//         #;write !,*32
+
+//         #;zwrite b             
+
+//         #;set dec= 63 
+
+//         #;for i=1:1:16 {set $BIT(c,i) = $BIT($FACTOR(dec),i) 
+
+//         #;write !,"Number of 1 bits=",$BITCOUNT($FACTOR(dec),1)
+
+//         #;write !,"bitstring c=",$BIT(c,1),$BIT(c,2),$BIT(c,3),$BIT(c,4),$BIT(c,5),$BIT(c,6)
+
+//         #;write !,"bitstring c/1=",$BIT(c,1)
+
+//         #;write !,*32
+
+//         #;zwrite c
+
+//     /// Description
+
+//     // Class LogicBit()
+
+//     // {
+
+//     //     // Set a to [1,1]
+
+//     // SET $BIT(a,1) = 1
+
+//     // SET $BIT(a,2) = 1
+
+//     // // Set b to [0,1]
+
+//     // SET $BIT(b,1) = 0
+
+//     // SET $BIT(b,2) = 1
+
+//     // WRITE !,"bitstring a=",$BIT(a,1),$BIT(a,2)
+
+//     // WRITE !,"bitstring b=",$BIT(b,1),$BIT(b,2)
+
+//     // SET c = $BITLOGIC(~b)
+
+//     // WRITE !,"The one's complement of b=",$BIT(c,1),$BIT(c,2)
+
+//     // // Find the intersection (AND) of a and b
+
+//     // SET c = $BITLOGIC(a&b)   // c should be [0,1]
+
+//     // WRITE !,"The AND of a and b=",$BIT(c,1),$BIT(c,2)
+
+//     // SET c = $BITLOGIC(a&~b)   // c should be [1,0]
+
+//     // WRITE !,"The AND of a and ~b=",$BIT(c,1),$BIT(c,2)
+
+//     // // Find the union (OR) of a and b
+
+//     // SET c = $BITLOGIC(a|b)   // c should be [1,1]
+
+//     // WRITE !,"The OR of a and b=",$BIT(c,1),$BIT(c,2)
+
+// //
+
+// }
+
+// }
 
 }
